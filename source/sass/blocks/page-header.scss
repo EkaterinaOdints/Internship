@@ -1,0 +1,33 @@
+.page-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+  margin: 0 auto;
+  width: 320px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 30px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 30px 100px;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+

@@ -1,0 +1,31 @@
+.hero__swiper-pagination-wrapper {
+  width: 80px;
+  height: 28px;
+  position: absolute;
+  left: calc(50% - 105px);
+  z-index: 5;
+  opacity: 1;
+  border-radius: 12px 12px 0 0;
+  transform: translateX(-50%);
+  transition: 100ms;
+
+  @media (min-width: $tablet-width) {
+    width: 100px;
+    height: 40px;
+    left: calc(50% - 289px);
+  }
+
+  @media (min-width: $desktop-width) {
+    left: calc(50% - 570px);
+  }
+}
+
+.hero__swiper-pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 16px;
+  }
+}

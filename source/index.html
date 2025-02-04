@@ -1,31 +1,192 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship</title>
+  <link rel="stylesheet" href="sass/style.scss">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+<body>
+  <header class="page-header">
+    <div class="page-header__container">
+      <div class="page-header__logo logo">
+        <img src="img/logo.svg" alt="Логотип Internship" width="52" height="52">
+      </div>
+      <nav class="page-header__navigation navigation navigation-js">
+        <button class="navigation__button button--dark navigation-button-js" type="button">Меню</button>
+        <ul class="navigation__list menu list-reset menu-js">
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">О проекте</a>
+          </li>
+          <li class="menu__item menu__item--sub menu-item-sub-js">
+            <button class="menu__item-link submenu-button-js" type="button">Программы</button>
+            <ul class="menu__item-list submenu submenu-js list-reset">
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Стажировки</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Волонтёрство</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Учёба</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Религия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">Как поехать</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">Отзывы</a>
+          </li>
+          <li class="menu__item menu__item--sub menu-item-sub-js">
+            <button class="menu__item-link submenu-button-js" type="button">Новости</button>
+            <ul class="menu__item-list submenu submenu-js list-reset">
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Общее</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Волонтёрство</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Стажировки</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Карьера</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Путешествия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 class="visually-hidden">«Стажировка»</h1>
+    <section class="hero" data-test="hero">
+      <div class="hero__container">
+        <h2 class="visually-hidden">Промо</h2>
+        <div class="hero__swiper-container">
+          <div class="hero__swiper hero-swiper swiper hero-swiper-js">
+            <div class="hero-swiper__wrapper swiper-wrapper">
+              <div class="hero-swiper__swiper-slide hero-swiper-slide hero-swiper-slide--first swiper-slide" tabindex="0">
+                <div class="hero-swiper-slide__wrapper">
+                  <div class="hero-swiper-slide__text hero-swiper-text hero-swiper-text-js">
+                    <h3 class="hero-swiper-text__header">Глобальный профессиональный опыт обучения за рубежом</h3>
+                    <div class="hero-swiper-text__info">
+                      <div class="hero-swiper-text__content">
+                        <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                      </div>
+                      <div class="hero-swiper-text__button-wrapper">
+                        <a class="hero-swiper-text__button button button--light" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-swiper__swiper-slide hero-swiper-slide hero-swiper-slide--second swiper-slide" tabindex="0">
+                <div class="hero-swiper-slide__wrapper">
+                  <div class="hero-swiper-slide__text hero-swiper-text hero-swiper-text-js">
+                    <h3 class="hero-swiper-text__header">Волонтёрские программы – внесите свой вклад в общество</h3>
+                    <div class="hero-swiper-text__info">
+                      <div class="hero-swiper-text__content">
+                        <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                      </div>
+                      <div class="hero-swiper-text__button-wrapper">
+                        <a class="hero-swiper-text__button button button--light" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-swiper__swiper-slide hero-swiper-slide hero-swiper-slide--third swiper-slide" tabindex="0">
+                <div class="hero-swiper-slide__wrapper">
+                  <div class="hero-swiper-slide__text hero-swiper-text hero-swiper-text-js">
+                    <h3 class="hero-swiper-text__header">Программы стажировок в крупнейших компаниях мира</h3>
+                    <div class="hero-swiper-text__info">
+                      <div class="hero-swiper-text__content">
+                        <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                      </div>
+                      <div class="hero-swiper-text__button-wrapper">
+                        <a class="hero-swiper-text__button button button--light" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero__swiper-pagination-wrapper hero-swiper-pagination-wrapper-js">
+              <div class="hero__swiper-pagination swiper-pagination hero-swiper-pagination-js">
+                <button class="swiper-pagination-bullet" type="button">
+                  <span class="visually-hidden">Первый слайд</span>
+                </button><button class="swiper-pagination-bullet" type="button">
+                  <span class="visually-hidden">Второй слайд</span>
+                </button>
+                <button class="swiper-pagination-bullet" type="button">
+                  <span class="visually-hidden">Третий слайд</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about" data-test="about">
+      <div class="container">
+        <h2>О проекте «Стажировка»</h2>
+      </div>
+    </section>
+    <section class="programs" data-test="programs">
+      <div class="container">
+        <h2>Программы</h2>
+      </div>
+    </section>
+    <section class="grant" data-test="grant">
+      <div class="container">
+        <h2>Как поехать</h2>
+      </div>
+    </section>
+    <section class="news" data-test="news">
+      <div class="container">
+        <h2>Новости и материалы</h2>
+      </div>
+    </section>
+    <section class="faq" data-test="FAQ">
+      <div class="container">
+        <h2>Вопросы и ответы</h2>
+      </div>
+    </section>
+    <section class="reviews" data-test="reviews">
+      <div class="container">
+        <h2>Отзывы</h2>
+      </div>
+    </section>
+    <section class="contacts" data-test="contacts">
+      <div class="container">
+        <h2>Контакты</h2>
+      </div>
+    </section>
+    <section class="form" data-test="form">
+      <div class="container">
+        <h2>Напишите нам</h2>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer" data-test="footer">
+    <div class="container"></div>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>

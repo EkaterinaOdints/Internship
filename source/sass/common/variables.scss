@@ -1,0 +1,20 @@
+$desktop-width: 1440px;
+$tablet-width: 768px;
+$text-dark: #484848;
+$text-light: #ffffff;
+$text-light-opacity: rgba(255, 255, 255, 0.7);
+$bg-dark: #316dc2;
+$bg-dark-opacity: rgba(49, 109, 194, 0.7);
+$bg-light: #f0efe9;
+$active: #275699;
+$disabled: #a9afb7;
+$error: #ff5e66;
+$overlay: rgba(49, 109, 194, 0.2);
+
+:root {
+  --swiper-pagination-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    --swiper-pagination-bottom: 14px;
+  }
+}

@@ -1,0 +1,19 @@
+.submenu {
+  height: 0;
+  overflow: hidden;
+  transition: 300ms;
+}
+
+.submenu__item-link {
+  padding: 5px 0;
+  display: inline-block;
+  color: $text-light;
+  opacity: 0.6;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    outline: none;
+  }
+}

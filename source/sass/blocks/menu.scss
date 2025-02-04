@@ -1,0 +1,90 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  transition: 300ms;
+  width: 0;
+  color: $text-light;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: $bg-dark;
+  border-radius: 16px;
+}
+
+.menu.menu--openned {
+  overflow: scroll;
+  width: 290px;
+  padding: 0 25px;
+}
+
+.menu__item {
+  padding-bottom: 18px;
+}
+
+.menu__item:first-child {
+  padding-top: 35px;
+}
+
+.menu__item:last-child {
+  padding-bottom: 35px;
+}
+
+.menu__item-link {
+  color: $text-light;
+  opacity: 0.7;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 5px 0;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    outline: none;
+  }
+}
+
+.menu__item-list {
+  margin-left: 16px;
+}
+
+.menu__item--sub {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu__item--sub .menu__item-link {
+  position: relative;
+  padding-right: 22px;
+
+  &::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    mask-image: url("../__spritemap#sprite-angle-view");
+    transform: translateY(-50%) scale(1, -1);
+    transition: 300ms;
+    transform-origin: center;
+    background-color: $text-light;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+}
+
+.menu__item--openned .menu__item-link {
+  opacity: 1;
+
+  &::after {
+    transform: translateY(-50%) scale(1, 1);
+  }
+}
