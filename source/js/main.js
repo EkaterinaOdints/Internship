@@ -88,26 +88,51 @@ const useMenu = () => {
     item.classList.toggle('menu__item--openned');
   };
 
+  const closeMenu = () => {
+    menu.style.height = null;
+
+    submenuCollection.forEach((item) => {
+      const submenuButton = item.querySelector('.submenu-button-js');
+      submenuButton.removeEventListener('click', toggleSubmenu);
+
+      closeSubmenu(item.querySelector('.submenu'));
+
+      item.classList.remove('menu__item--openned');
+    });
+
+    body.classList.remove('overlay');
+    menuButton.classList.remove('nav-button--menu-oppened');
+    menu.classList.remove('menu--openned');
+    document.removeEventListener('click', onDocumentClick);
+    document.removeEventListener('keydown', onEscapeClick);
+  };
+
+  function onDocumentClick(evt) {
+    if (evt.composedPath().includes(navigation)) {
+      return null;
+    } else {
+      closeMenu();
+    }
+  }
+
+  function onEscapeClick(evt) {
+    if(evt.code === 'Escape'){
+      closeMenu();
+    }
+  }
+
   const toggleMenu = () => {
     if (menu.classList.contains('menu--openned')) {
-      menu.style.height = null;
-
-      submenuCollection.forEach((item) => {
-        const submenuButton = item.querySelector('.submenu-button-js');
-        submenuButton.removeEventListener('click', toggleSubmenu);
-
-        closeSubmenu(item.querySelector('.submenu'));
-
-        item.classList.remove('menu__item--openned');
-      });
+      closeMenu();
     } else {
       setMenuHeight();
       useSubmenu();
+      body.classList.add('overlay');
+      menuButton.classList.add('nav-button--menu-oppened');
+      menu.classList.add('menu--openned');
+      document.addEventListener('click', onDocumentClick);
+      document.addEventListener('keydown', onEscapeClick);
     }
-
-    body.classList.toggle('overlay');
-    menuButton.classList.toggle('nav-button--menu-oppened');
-    menu.classList.toggle('menu--openned');
   };
 
   function useSubmenu() {
