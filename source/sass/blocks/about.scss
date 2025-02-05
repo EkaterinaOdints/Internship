@@ -1,0 +1,36 @@
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-areas:
+      "promo  content"
+      "scheme scheme";
+    column-gap: 40px;
+    row-gap: 60px;
+    grid-template-columns: 702px 498px;
+    padding: 70px 100px;
+  }
+}
+
+.about__title {
+  margin: 0 0 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.about__promo {
+  grid-area: promo;
+}
+
+.about__content {
+  grid-area: content;
+}
+
+.about__scheme {
+  grid-area: scheme;
+}

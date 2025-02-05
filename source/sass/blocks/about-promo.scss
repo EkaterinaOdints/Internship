@@ -1,0 +1,21 @@
+.about-promo__text {
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+.about-promo__text p {
+  margin: 0;
+}

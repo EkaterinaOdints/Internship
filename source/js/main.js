@@ -14,6 +14,11 @@ const heroSwiperInit = () => {
       clickable: true,
       bulletElement: 'button',
     },
+    breakpoints: {
+      1440: {
+        allowTouchMove: false,
+      }
+    },
   });
 
   const swiper = heroSwiper.el;

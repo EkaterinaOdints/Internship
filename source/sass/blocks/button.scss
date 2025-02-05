@@ -10,6 +10,9 @@
   border-radius: 30px;
   display: block;
   position: relative;
+  background-color: inherit;
+  cursor: pointer;
+  transition: 300ms;
 
   &::before {
     content: "";
@@ -21,6 +24,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 5px;
+    transition: 300ms;
   }
 
   &::after {
@@ -36,6 +40,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 5px;
+    transition: 300ms;
   }
 
   &:hover {
@@ -75,9 +80,7 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
-    padding: 21px 81px 21px 30px;
-  }
+
 }
 
 .button.disabled,
@@ -86,7 +89,6 @@
 }
 
 .button--light {
-  background-color: $text-light;
   color: $bg-dark;
   border-color: $bg-dark;
 
@@ -112,7 +114,7 @@
   }
 
   &:focus {
-    background-color: $text-light;
+    background-color: inherit;
     color: $bg-dark;
 
     &::before {
@@ -150,7 +152,6 @@
 }
 
 .button--dark {
-  background-color: $bg-dark;
   color: $text-light;
   border-color: $text-light;
 
@@ -176,7 +177,7 @@
   }
 
   &:focus {
-    background-color: $bg-dark;
+    background-color: inherit;
     color: $text-light;
 
     &::before {
