@@ -1,0 +1,50 @@
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper:hover ~ .form-item__label {
+  opacity: 1;
+}
+
+.select-wrapper__hidden-item {
+  width: 260px;
+  height: 44px;
+  border-radius: 8px;
+  opacity: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+    height: 50px;
+  }
+}
+
+.select-wrapper__primary-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.select-wrapper__hidden-item.invalid ~ .select .select__button {
+  background-color: $error-opacity;
+  border-color: $error;
+}
+
+.select-wrapper.disabled {
+  pointer-events: none;
+}
+
+.select-wrapper.disabled ~ .form-item__label {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.select-wrapper.disabled .select__button {
+  pointer-events: none;
+  background-color: rgba(169, 175, 183, 0.2);
+  border-color: rgba(169, 175, 183, 0.5);
+  color: rgba(169, 175, 183, 0.5);
+
+  &::after {
+    background-color: rgba(169, 175, 183, 0.5);
+  }
+}

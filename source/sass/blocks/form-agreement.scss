@@ -1,0 +1,125 @@
+.form-agreement {
+  position: relative;
+}
+
+.form-agreement__label {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+    border-radius: 2px;
+  }
+
+  &::after {
+    content: none;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    mask-image: url("../__spritemap#sprite-check-view");
+    mask-position: center;
+    mask-size: 10px 10px;
+    mask-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.form-agreement--light-bg .form-agreement__label {
+  &::before {
+    background-color: $text-light;
+    border: 1px solid $bg-dark-opacity;
+  }
+
+  &::after {
+    background-color: $bg-dark;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: $bg-dark;
+    }
+  }
+}
+
+.form-agreement__input {
+  opacity: 0;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-agreement__input:checked ~ .form-agreement__label {
+  &::after {
+    content: "";
+  }
+}
+
+.form-agreement--light-bg .form-agreement__input:checked ~ .form-agreement__label {
+  &::before {
+    background-color: $bg-dark;
+  }
+
+  &::after {
+    content: "";
+    background-color: $text-light;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: $text-light;
+    }
+
+    &::after {
+      background-color: $bg-dark;
+    }
+  }
+}
+
+.form-agreement__input.invalid ~ .form-agreement__label {
+  &::before {
+    opacity: 0.7;
+    border-color: $error;
+    background-color: $error-opacity;
+  }
+}
+
+.form-agreement__input:disabled ~ .form-agreement__label,
+.form-agreement__input.disabled ~ .form-agreement__label {
+  pointer-events: none;
+
+  &::before {
+    background-color: $disabled;
+    border-color: $disabled;
+  }
+}
+
+.form-agreement__input:disabled:checked ~ .form-agreement__label,
+.form-agreement__input.disabled:checked ~ .form-agreement__label {
+  pointer-events: none;
+
+  &::before {
+    background-color: $disabled;
+    border-color: $disabled;
+  }
+}

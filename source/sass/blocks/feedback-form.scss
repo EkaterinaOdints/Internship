@@ -1,0 +1,18 @@
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+}
+
+.feedback-form__button {
+  margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 194px;
+  }
+}

@@ -1,0 +1,90 @@
+.select__button {
+  width: 260px;
+  height: 44px;
+  background-color: $text-light;
+  border-radius: 8px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  position: relative;
+  padding: 15px 54px 15px 20px;
+  text-align: start;
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    mask-image: url("../__spritemap#sprite-angle-view");
+    mask-position: center;
+    mask-size: 16px 9px;
+    mask-repeat: no-repeat;
+    background-color: $text-dark;
+    transform: translateY(-50%) scale(1, -1);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transition: 200ms;
+  }
+
+  &:hover {
+    border-color: $text-dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+    height: 50px;
+  }
+}
+
+.select__list {
+  position: absolute;
+  display: none;
+  background-color: $text-light;
+  z-index: 5;
+  width: 100%;
+  border: 1px solid $text-dark;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  left: 0;
+  top: 49px;
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    top: 55px;
+  }
+}
+
+.select.select--opened .select__button {
+  &::after {
+    transform: translateY(-50%) scale(-1, 1);
+  }
+}
+
+.select.select--opened .select__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.select__list-item {
+  padding: 17px 20px;
+
+  &:hover {
+    color: $bg-dark;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $bg-dark;
+    color: $text-light;
+    outline: none;
+  }
+}
+
+.select__button:focus {
+  outline: none;
+  border-color: $text-dark;
+}

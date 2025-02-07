@@ -111,20 +111,3 @@
     background-color: $disabled;
   }
 }
-
-.navigation__button.nav-button--menu-oppened {
-  width: 290px;
-  background-color: $bg-dark;
-  color: $text-light;
-  transition: 300ms;
-
-  &::before {
-    background-color: $text-light;
-  }
-
-  &::after {
-    mask-image: url("../__spritemap#sprite-menu-close-view");
-    mask-size: 20px 20px;
-    background-color: $bg-dark;
-  }
-}

@@ -18,55 +18,55 @@
       </div>
       <nav class="page-header__navigation navigation navigation-js">
         <button class="navigation__button navigation-button-js" type="button">Меню</button>
-        <ul class="navigation__list menu list-reset menu-js">
+        <ul class="navigation__list menu list-reset menu-js" aria-hidden="true">
           <li class="menu__item">
-            <a class="menu__item-link" href="#">О проекте</a>
+            <a class="menu__item-link menu-link-js" href="#" tabindex="-1">О проекте</a>
           </li>
           <li class="menu__item menu__item--sub menu-item-sub-js">
-            <button class="menu__item-link submenu-button-js" type="button">Программы</button>
+            <button class="menu__item-link menu-link-js submenu-button-js" type="button" tabindex="-1">Программы</button>
             <ul class="menu__item-list submenu submenu-js list-reset">
               <li class="submenu__item">
-                <a class="submenu__item-link" href="#">Стажировки</a>
+                <a class="submenu__item-link submenu-link-js" href="#" tabindex="-1">Стажировки</a>
               </li>
               <li class="submenu__item">
-                <a class="submenu__item-link" href="#">Волонтёрство</a>
+                <a class="submenu__item-link submenu-link-js" href="#" tabindex="-1">Волонтёрство</a>
               </li>
               <li class="submenu__item">
-                <a class="submenu__item-link" href="#">Учёба</a>
+                <a class="submenu__item-link submenu-link-js" href="#" tabindex="-1">Учёба</a>
               </li>
               <li class="submenu__item">
-                <a class="submenu__item-link" href="#">Религия</a>
+                <a class="submenu__item-link submenu-link-js" href="#" tabindex="-1">Религия</a>
               </li>
             </ul>
           </li>
           <li class="menu__item">
-            <a class="menu__item-link" href="#">Как поехать</a>
+            <a class="menu__item-link menu-link-js" href="#" tabindex="-1">Как поехать</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item-link" href="#">Отзывы</a>
+            <a class="menu__item-link menu-link-js" href="#" tabindex="-1">Отзывы</a>
           </li>
           <li class="menu__item menu__item--sub menu-item-sub-js">
-            <button class="menu__item-link submenu-button-js" type="button">Новости</button>
+            <button class="menu__item-link menu-link-js submenu-button-js" type="button" tabindex="-1">Новости</button>
             <ul class="menu__item-list submenu submenu-js list-reset">
               <li class="submenu__item">
-                <a class="submenu__item-link" href="#">Общее</a>
+                <a class="submenu__item-link submenu-link-js" href="#" tabindex="-1">Общее</a>
               </li>
               <li class="submenu__item">
-                <a class="submenu__item-link" href="#">Волонтёрство</a>
+                <a class="submenu__item-link submenu-link-js" href="#" tabindex="-1">Волонтёрство</a>
               </li>
               <li class="submenu__item">
-                <a class="submenu__item-link" href="#">Стажировки</a>
+                <a class="submenu__item-link submenu-link-js" href="#" tabindex="-1">Стажировки</a>
               </li>
               <li class="submenu__item">
-                <a class="submenu__item-link" href="#">Карьера</a>
+                <a class="submenu__item-link submenu-link-js" href="#" tabindex="-1">Карьера</a>
               </li>
               <li class="submenu__item">
-                <a class="submenu__item-link" href="#">Путешествия</a>
+                <a class="submenu__item-link submenu-link-js" href="#" tabindex="-1">Путешествия</a>
               </li>
             </ul>
           </li>
           <li class="menu__item">
-            <a class="menu__item-link" href="#">Контакты</a>
+            <a class="menu__item-link menu-link-js" href="#" tabindex="-1">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -155,7 +155,7 @@
             <h3>Наша цель</h3>
             <p>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые изменения.</p>
           </div>
-          <button class="about-content__button button button--light" type="button">Подробнее о проекте</button>
+          <button class="about-content__button button button--light feedback-modal-button-js" type="button">Подробнее о проекте</button>
         </div>
         <div class="about__scheme about-scheme">
           <ul class="about-scheme__list list-reset">
@@ -214,6 +214,54 @@
         <h2>Напишите нам</h2>
       </div>
     </section>
+    <div class="feedback-modal feedback-modal-js">
+      <div class="feedback-modal__container feedback-modal-container-js">
+        <button class="feedback-modal__close-button feedback-modal-close-button-js" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <div class="feedback-modal__text">
+          <h2 class="feedback-modal__title">Напишите нам</h2>
+          <p class="feedback-modal__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+        </div>
+        <form class="feedback-modal__form feedback-form feedback-form-js" method="post" action="https://echo.htmlacademy.ru">
+          <div class="feedback-form__item form-item">
+            <input class="form-item__input input-js" type="text" name="name" id="name" required>
+            <label class="form-item__label" for="name">Имя</label>
+          </div>
+          <div class="feedback-form__item form-item">
+            <input class="form-item__input input-js" type="tel" name="phone" id="phone" pattern="^\+7\d{10}$" title="Номер должен начинаться с +7 и содержать 10 цифр" required>
+            <label class="form-item__label" for="phone">Телефон</label>
+          </div>
+          <div class="feedback-form__item form-item">
+            <div class="form-item__select-wrapper select-wrapper select-wrapper-js">
+              <select class="select-wrapper__hidden-item select-wrapper-hidden-item-js input-js" name="city" tabindex="-1" required>
+                <option class="select-hidden-option-js" value="petersburg">Санкт-Петербург</option>
+                <option class="select-hidden-option-js" value="ekaterinburg">Екатеринбург</option>
+                <option class="select-hidden-option-js" value="novgorod">Новгород</option>
+                <option class="select-hidden-option-js" value="kazan">Казань</option>
+              </select>
+              <div class="select-wrapper__primary-item select select-js">
+                <button class="select__button select-button-js" type="button" id="city">
+                  <span class="visually-hidden">Выберите город</span>
+                </button>
+                <ul class="select__list list-reset select-list-js">
+                  <li class="select__list-item select-list-item-js" tabindex="0" id="petersburg">Санкт-Петербург</li>
+                  <li class="select__list-item select-list-item-js" tabindex="0" id="ekaterinburg">Екатеринбург</li>
+                  <li class="select__list-item select-list-item-js" tabindex="0" id="novgorod">Новгород</li>
+                  <li class="select__list-item select-list-item-js" tabindex="0" id="kazan">Казань</li>
+                </ul>
+              </div>
+            </div>
+            <label class="form-item__label" for="city">Выберите город</label>
+          </div>
+          <div class="feedback-form__item form-agreement form-agreement--light-bg">
+            <input class="form-agreement__input input-js" type="checkbox" name="agreement" id="agreement" required>
+            <label class="form-agreement__label" for="agreement">Я согласен на обработку моих персональных данных</label>
+          </div>
+          <button class="feedback-form__button feedback-form-button-js button button--light" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
   </main>
   <footer class="page-footer" data-test="footer">
     <div class="container"></div>

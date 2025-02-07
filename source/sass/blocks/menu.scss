@@ -10,12 +10,7 @@
   line-height: 16px;
   background-color: $bg-dark;
   border-radius: 16px;
-}
-
-.menu.menu--openned {
-  overflow: scroll;
-  width: 290px;
-  padding: 0 25px;
+  max-height: 0;
 }
 
 .menu__item {
@@ -81,7 +76,7 @@
   }
 }
 
-.menu__item--openned .menu__item-link {
+.menu__item--opened .menu__item-link {
   opacity: 1;
 
   &::after {
