@@ -31,6 +31,21 @@
   justify-content: center;
 }
 
+.page-header__navigation {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+
+  @media (min-width: $tablet-width) {
+    right: 45px;
+    top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 100px;
+  }
+}
+
 .page-header.menu-opened {
   z-index: 6;
 }

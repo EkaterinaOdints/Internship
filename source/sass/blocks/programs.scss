@@ -1,0 +1,114 @@
+.programs__container {
+  padding: 50px 15px;
+  margin: 0 auto;
+  width: 320px;
+  display: grid;
+  grid-template-columns: 290px;
+  row-gap: 30px;
+  grid-template-areas:
+    "title"
+    "swiper"
+    "button";
+
+  @media (min-width: $tablet-width) {
+    grid-template-areas:
+      "title  button"
+      "swiper swiper";
+    padding: 50px 0;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    row-gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 62px 100px 60px;
+    row-gap: 42px;
+    width: 1440px;
+  }
+}
+
+.programs__title {
+  margin: 5px 0;
+  max-width: 230px;
+  grid-area: title;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    max-width: 946px;
+  }
+}
+
+.programs__swiper-container {
+  position: relative;
+  grid-area: swiper;
+  width: 100%;
+}
+
+.programs__swiper-controls {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    width: 100%;
+  }
+}
+
+.programs__swiper-navigation-wrapper {
+  position: absolute;
+  top: -56px;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    top: auto;
+    right: 45px;
+    bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 0;
+  }
+}
+
+.programs__button {
+  width: 205px;
+  text-align: center;
+  grid-area: button;
+
+  @media (min-width: $tablet-width) {
+    width: 234px;
+    justify-self: end;
+    margin-right: 45px;
+
+    &::before {
+      right: 4px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.programs__swiper-scrollbar-wrapper {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 768px;
+    padding: 50px 0 10px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 0 10px;
+  }
+}

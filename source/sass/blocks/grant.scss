@@ -1,0 +1,30 @@
+.grant {
+  background-color: $bg-dark;
+  color: $text-light;
+}
+
+.grant__container {
+  padding: 70px 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 100px 45px;
+    gap: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 120px 100px;
+    grid-template-columns: 498px 498px;
+    gap: 138px;
+  }
+}
+
+.grant__title {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 498px;
+  }
+}

@@ -1,0 +1,61 @@
+.button-small {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  background-color: $bg-dark;
+  transition: 300ms;
+
+  &::after {
+    content: "";
+    display: block;
+    mask-image: url("../__spritemap#sprite-arrow-button-view");
+    width: 30px;
+    height: 30px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 10px 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 300ms;
+    background-color: $text-light;
+  }
+
+  &:hover {
+    background-color: $text-light;
+
+    &::after {
+      transform: translateY(-50%) rotate(45deg);
+      background-color: $bg-dark;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &:active {
+    background-color: $text-light;
+
+    &::after {
+      transform: translateY(-50%) rotate(45deg);
+      background-color: $bg-dark-opacity;
+    }
+  }
+}
+
+.button-small:disabled,
+.button-small.disabled {
+  pointer-events: none;
+  background-color: $disabled;
+
+  &::after {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}

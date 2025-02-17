@@ -1,0 +1,90 @@
+.grant-scheme {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: $desktop-width) {
+    gap: 40px;
+  }
+}
+
+.grant-scheme__text {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 10px;
+  }
+}
+
+.grant-scheme__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  counter-reset: counterScheme 0;
+  padding-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.grant-scheme__item {
+  padding: 24px 25px;
+  border: 1px solid $text-light;
+  border-radius: 16px;
+  position: relative;
+  counter-increment: counterScheme 1;
+
+  &::before {
+    content: ""counter(counterScheme) "";
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: $bg-dark;
+    position: absolute;
+    left: -16px;
+    top: -6px;
+    border-radius: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 305px;
+    margin: 15px 0 0 20px;
+    padding: 30px 25px;
+
+    &::before {
+      width: 42px;
+      height: 42px;
+      font-size: 22px;
+      line-height: 22px;
+      top: -16px;
+      left: -21px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}

@@ -80,7 +80,7 @@
         <div class="hero__swiper-container">
           <div class="hero__swiper hero-swiper swiper hero-swiper-js">
             <div class="hero-swiper__wrapper swiper-wrapper">
-              <div class="hero-swiper__swiper-slide hero-swiper-slide hero-swiper-slide--first swiper-slide" tabindex="0">
+              <div class="hero-swiper__slide hero-swiper-slide hero-swiper-slide--first swiper-slide" tabindex="0">
                 <div class="hero-swiper-slide__wrapper">
                   <div class="hero-swiper-slide__text hero-swiper-text hero-swiper-text-js">
                     <h3 class="hero-swiper-text__header">Глобальный профессиональный опыт обучения за рубежом</h3>
@@ -95,7 +95,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hero-swiper__swiper-slide hero-swiper-slide hero-swiper-slide--second swiper-slide" tabindex="0">
+              <div class="hero-swiper__slide hero-swiper-slide hero-swiper-slide--second swiper-slide" tabindex="0">
                 <div class="hero-swiper-slide__wrapper">
                   <div class="hero-swiper-slide__text hero-swiper-text hero-swiper-text-js">
                     <h3 class="hero-swiper-text__header">Волонтёрские программы – внесите свой вклад в общество</h3>
@@ -110,7 +110,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hero-swiper__swiper-slide hero-swiper-slide hero-swiper-slide--third swiper-slide" tabindex="0">
+              <div class="hero-swiper__slide hero-swiper-slide hero-swiper-slide--third swiper-slide" tabindex="0">
                 <div class="hero-swiper-slide__wrapper">
                   <div class="hero-swiper-slide__text hero-swiper-text hero-swiper-text-js">
                     <h3 class="hero-swiper-text__header">Программы стажировок в крупнейших компаниях мира</h3>
@@ -126,16 +126,19 @@
                 </div>
               </div>
             </div>
-            <div class="hero__swiper-pagination-wrapper hero-swiper-pagination-wrapper-js">
-              <div class="hero__swiper-pagination swiper-pagination hero-swiper-pagination-js">
-                <button class="swiper-pagination-bullet" type="button">
-                  <span class="visually-hidden">Первый слайд</span>
-                </button><button class="swiper-pagination-bullet" type="button">
-                  <span class="visually-hidden">Второй слайд</span>
-                </button>
-                <button class="swiper-pagination-bullet" type="button">
-                  <span class="visually-hidden">Третий слайд</span>
-                </button>
+            <div class="hero__swiper-controls hero-swiper-controls-js">
+              <div class="hero__swiper-pagination-wrapper">
+                <div class="hero__swiper-pagination swiper-pagination bullet-pagination hero-swiper-pagination-js">
+                  <button class="swiper-pagination-bullet" type="button">
+                    <span class="visually-hidden">Первый слайд</span>
+                  </button>
+                  <button class="swiper-pagination-bullet" type="button">
+                    <span class="visually-hidden">Второй слайд</span>
+                  </button>
+                  <button class="swiper-pagination-bullet" type="button">
+                    <span class="visually-hidden">Третий слайд</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -180,18 +183,532 @@
       </div>
     </section>
     <section class="programs" data-test="programs">
-      <div class="container">
-        <h2>Программы</h2>
+      <div class="programs__container">
+        <h2 class="programs__title title title--dark">Программы</h2>
+        <div class="programs__swiper-container">
+          <div class="programs__swiper programs-swiper swiper programs-swiper-js">
+            <div class="programs-swiper__wrapper swiper-wrapper">
+              <div class="programs-swiper__slide programs-swiper-slide programs-swiper-slide--internship swiper-slide" tabindex="0">
+                <div class="programs-swiper-slide__wrapper">
+                  <div class="programs-swiper-slide__content programs-swiper-content">
+                    <h2 class="programs-swiper-content__title">Стажировки</h2>
+                    <div class="programs-swiper-content__description">
+                      <div class="programs-swiper-content__text">
+                        <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                      </div>
+                      <a class="programs-swiper-content__button button-small" href="#">
+                        <span class="visually-hidden">Подробнее</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="programs-swiper__slide programs-swiper-slide programs-swiper-slide--volunteering swiper-slide" tabindex="0">
+                <div class="programs-swiper-slide__wrapper">
+                  <div class="programs-swiper-slide__content programs-swiper-content">
+                    <h2 class="programs-swiper-content__title">Волонтёрство</h2>
+                    <div class="programs-swiper-content__description">
+                      <div class="programs-swiper-content__text">
+                        <p>Помогайте другим и развивайте свои лидерские&nbsp;качества.</p>
+                      </div>
+                      <a class="programs-swiper-content__button button-small" href="#">
+                        <span class="visually-hidden">Подробнее</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="programs-swiper__slide programs-swiper-slide programs-swiper-slide--education swiper-slide" tabindex="0">
+                <div class="programs-swiper-slide__wrapper">
+                  <div class="programs-swiper-slide__content programs-swiper-content">
+                    <h2 class="programs-swiper-content__title">Учёба</h2>
+                    <div class="programs-swiper-content__description">
+                      <div class="programs-swiper-content__text">
+                        <p>Получите образование и измените своё будущее.</p>
+                      </div>
+                      <a class="programs-swiper-content__button button-small" href="#">
+                        <span class="visually-hidden">Подробнее</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="programs-swiper__slide programs-swiper-slide programs-swiper-slide--internship swiper-slide" tabindex="0">
+                <div class="programs-swiper-slide__wrapper">
+                  <div class="programs-swiper-slide__content programs-swiper-content">
+                    <h2 class="programs-swiper-content__title">Стажировки</h2>
+                    <div class="programs-swiper-content__description">
+                      <div class="programs-swiper-content__text">
+                        <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                      </div>
+                      <a class="programs-swiper-content__button button-small" href="#">
+                        <span class="visually-hidden">Подробнее</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="programs-swiper__slide programs-swiper-slide programs-swiper-slide--volunteering swiper-slide" tabindex="0">
+                <div class="programs-swiper-slide__wrapper">
+                  <div class="programs-swiper-slide__content programs-swiper-content">
+                    <h2 class="programs-swiper-content__title">Волонтёрство</h2>
+                    <div class="programs-swiper-content__description">
+                      <div class="programs-swiper-content__text">
+                        <p>Помогайте другим и развивайте свои лидерские&nbsp;качества.</p>
+                      </div>
+                      <a class="programs-swiper-content__button button-small" href="#">
+                        <span class="visually-hidden">Подробнее</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="programs-swiper__slide programs-swiper-slide programs-swiper-slide--education swiper-slide" tabindex="0">
+                <div class="programs-swiper-slide__wrapper">
+                  <div class="programs-swiper-slide__content programs-swiper-content">
+                    <h2 class="programs-swiper-content__title">Учёба</h2>
+                    <div class="programs-swiper-content__description">
+                      <div class="programs-swiper-content__text">
+                        <p>Получите образование и измените своё будущее.</p>
+                      </div>
+                      <a class="programs-swiper-content__button button-small" href="#">
+                        <span class="visually-hidden">Подробнее</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="programs__swiper-controls">
+            <div class="programs__swiper-scrollbar-wrapper swiper-scrollbar">
+              <div class="swiper-scrollbar__wrapper programs-swiper-scrollbar-js">
+                <button class="swiper-scrollbar__button swiper-scrollbar-drag" type="button">
+                  <span class="visually-hidden">Перетащить слайд</span>
+                </button>
+              </div>
+            </div>
+            <div class="programs__swiper-navigation-wrapper swiper-navigation">
+              <button class="swiper-navigation__button swiper-navigation__button-prev programs-swiper-button-prev-js" type="button">
+                <span class="visually-hidden">Назад</span>
+              </button>
+              <button class="swiper-navigation__button swiper-navigation__button-next programs-swiper-button-next-js" type="button">
+                <span class="visually-hidden">Вперёд</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <a class="programs__button button button--light" href="#">Все программы</a>
       </div>
     </section>
     <section class="grant" data-test="grant">
-      <div class="container">
-        <h2>Как поехать</h2>
+      <div class="grant__container container">
+        <div class="grant__info grant-info">
+          <h2 class="grant__title title title--light">Как поехать</h2>
+          <div class="grant-info__text">
+            <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+          </div>
+          <div class="grant-info__picture">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/grant/grant-countries-desktop@1x.webp 1x, img/grant/grant-countries-desktop@2x.webp 2x" type="image/webp" width="498" height="363">
+              <source media="(min-width: 1440px)" srcset="img/grant/grant-countries-desktop@1x.jpg 1x, img/grant/grant-countries-desktop@2x.jpg 2x" type="image/jpeg" width="498" height="363">
+              <source media="(min-width: 768px)" srcset="img/grant/grant-countries-tablet@1x.webp 1x, img/grant/grant-countries-tablet@2x.webp 2x" type="image/webp" width="678" height="375">
+              <source media="(min-width: 768px)" srcset="img/grant/grant-countries-tablet@1x.jpg 1x, img/grant/grant-countries-tablet@2x.jpg 2x" type="image/jpeg" width="678" height="375">
+              <source srcset="img/grant/grant-countries-mobile@1x.webp 1x, img/grant/grant-countries-mobile@2x.webp 2x" type="image/webp" width="290" height="200">
+              <img src="img/grant/grant-countries-mobile@1x.jpg" srcset="img/grant/grant-countries-mobile@2x.jpg 2x" alt="Путеводные таблички с названиями стран." width="290" height="200">
+            </picture>
+          </div>
+        </div>
+        <div class="grant__scheme grant-scheme">
+          <p class="grant-scheme__text">Чтобы получить грант на обучение, вам нужно:</p>
+          <ul class="grant-scheme__list list-reset">
+            <li class="grant-scheme__item">Быть в возрасте от 16 до 30 лет</li>
+            <li class="grant-scheme__item">Иметь оконченное среднее образование</li>
+            <li class="grant-scheme__item">Иметь документально подтверждённое отсутствие судимости и пройти консульскую проверку</li>
+            <li class="grant-scheme__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в одной стране</li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="news" data-test="news">
-      <div class="container">
-        <h2>Новости и материалы</h2>
+      <div class="news__container container">
+        <h2 class="news__title title title--dark">Новости и материалы</h2>
+        <div class="news__tab news-tab">
+          <div class="news-tab__nav news-nav">
+            <label class="news-nav__item">
+              <input class="news-nav__input" type="radio" name="news" checked>
+              <span class="news-nav__name" tabindex="0">Общее</span>
+            </label>
+            <label class="news-nav__item">
+              <input class="news-nav__input" type="radio" name="news">
+              <span class="news-nav__name" tabindex="0">Волонтёрство</span>
+            </label>
+            <label class="news-nav__item">
+              <input class="news-nav__input" type="radio" name="news">
+              <span class="news-nav__name" tabindex="0">Стажировки</span>
+            </label>
+            <label class="news-nav__item">
+              <input class="news-nav__input" type="radio" name="news">
+              <span class="news-nav__name" tabindex="0">Карьера</span>
+            </label>
+            <label class="news-nav__item">
+              <input class="news-nav__input" type="radio" name="news">
+              <span class="news-nav__name" tabindex="0">Путешествия</span>
+            </label>
+          </div>
+          <div class="news__content news-content-js">
+            <div class="news__swiper-container news-swiper-container-js" id="news-common">
+              <div class="news__swiper news-swiper swiper news-swiper-js">
+                <div class="news-swiper__wrapper swiper-wrapper news-swiper-wrapper-js">
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big news-swiper-slide--interview swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">23/03/2023</p>
+                        <h2 class="news-swiper-content__title">Интервью с участницей программы стажировки</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Саша рассказывает, как попала в программу и как прошла 6- месячная стажировка в ISOFound</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--journey swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">20/03/2023</p>
+                        <h2 class="news-swiper-content__title">Путешествуем по миру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Какие места посещают наши студенты весной</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big news-swiper-slide--volunteering swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">17/03/2023</p>
+                        <h2 class="news-swiper-content__title">Новая программа волонтёрства</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Программа помощи детям длительностью 4 месяца</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--career swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">10/03/2023</p>
+                        <h2 class="news-swiper-content__title">Построй свою карьеру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">23/03/2023</p>
+                        <h2 class="news-swiper-content__title">Интервью с участницей программы стажировки</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Саша рассказывает, как попала в программу и как прошла 6- месячная стажировка в ISOFound</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">20/03/2023</p>
+                        <h2 class="news-swiper-content__title">Путешествуем по миру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Какие места посещают наши студенты весной</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">17/03/2023</p>
+                        <h2 class="news-swiper-content__title">Новая программа волонтёрства</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Программа помощи детям длительностью 4 месяца</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">10/03/2023</p>
+                        <h2 class="news-swiper-content__title">Построй свою карьеру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">23/03/2023</p>
+                        <h2 class="news-swiper-content__title">Интервью с участницей программы стажировки</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Саша рассказывает, как попала в программу и как прошла 6- месячная стажировка в ISOFound</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">20/03/2023</p>
+                        <h2 class="news-swiper-content__title">Путешествуем по миру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Какие места посещают наши студенты весной</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">17/03/2023</p>
+                        <h2 class="news-swiper-content__title">Новая программа волонтёрства</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Программа помощи детям длительностью 4 месяца</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">10/03/2023</p>
+                        <h2 class="news-swiper-content__title">Построй свою карьеру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">23/03/2023</p>
+                        <h2 class="news-swiper-content__title">Интервью с участницей программы стажировки</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Саша рассказывает, как попала в программу и как прошла 6- месячная стажировка в ISOFound</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">20/03/2023</p>
+                        <h2 class="news-swiper-content__title">Путешествуем по миру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Какие места посещают наши студенты весной</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">17/03/2023</p>
+                        <h2 class="news-swiper-content__title">Новая программа волонтёрства</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Программа помощи детям длительностью 4 месяца</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">10/03/2023</p>
+                        <h2 class="news-swiper-content__title">Построй свою карьеру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">23/03/2023</p>
+                        <h2 class="news-swiper-content__title">Интервью с участницей программы стажировки</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Саша рассказывает, как попала в программу и как прошла 6- месячная стажировка в ISOFound</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">20/03/2023</p>
+                        <h2 class="news-swiper-content__title">Путешествуем по миру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Какие места посещают наши студенты весной</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide news-swiper-slide--big swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">17/03/2023</p>
+                        <h2 class="news-swiper-content__title">Новая программа волонтёрства</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Программа помощи детям длительностью 4 месяца</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-swiper__slide news-swiper-slide swiper-slide" tabindex="0">
+                    <div class="news-swiper-slide__wrapper">
+                      <div class="news-swiper-slide__content news-swiper-content">
+                        <p class="news-swiper-content__date">10/03/2023</p>
+                        <h2 class="news-swiper-content__title">Построй свою карьеру</h2>
+                        <div class="news-swiper-content__description">
+                          <div class="news-swiper-content__text">
+                            <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                          </div>
+                          <a class="news-swiper-content__button button-small" href="#">
+                            <span class="visually-hidden">Подробнее</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="news__swiper-controls">
+                <div class="news__swiper-navigation swiper-navigation">
+                  <button class="swiper-navigation__button swiper-navigation__button-prev news-swiper-button-prev-js" type="button">
+                    <span class="visually-hidden">Назад</span>
+                  </button>
+                  <button class="swiper-navigation__button swiper-navigation__button-next news-swiper-button-next-js" type="button">
+                    <span class="visually-hidden">Вперёд</span>
+                  </button>
+                </div>
+                <div class="news__swiper-pagination number-pagination swiper-pagination news-swiper-pagination-js">
+                  <button class="swiper-pagination-bullet" type="button">
+                    <span class="visually-hidden">Первый слайд</span>
+                  </button>
+                  <button class="swiper-pagination-bullet" type="button">
+                    <span class="visually-hidden">Второй слайд</span>
+                  </button>
+                  <button class="swiper-pagination-bullet" type="button">
+                    <span class="visually-hidden">Третий слайд</span>
+                  </button>
+                  <button class="swiper-pagination-bullet" type="button">
+                    <span class="visually-hidden">Четвёртый слайд</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="faq" data-test="FAQ">

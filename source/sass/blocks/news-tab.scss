@@ -1,0 +1,21 @@
+.news-tab__nav {
+  margin: 0 -15px 24px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 30px;
+    gap: 7px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+}
+

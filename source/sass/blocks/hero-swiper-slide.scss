@@ -5,6 +5,10 @@
   height: 568px;
   position: relative;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 
   &::before {
     content: "";
@@ -115,12 +119,9 @@
 }
 
 .hero-swiper-slide__text {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
   padding: 0 15px 20px;
   width: 320px;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     padding: 0 64px 60px 45px;

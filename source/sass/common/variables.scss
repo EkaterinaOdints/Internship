@@ -11,11 +11,3 @@ $disabled: #a9afb7;
 $error: #ff5e66;
 $error-opacity: rgba(255, 94, 102, 0.2);
 $overlay: rgba(49, 109, 194, 0.2);
-
-:root {
-  --swiper-pagination-bottom: 10px;
-
-  @media (min-width: $tablet-width) {
-    --swiper-pagination-bottom: 14px;
-  }
-}

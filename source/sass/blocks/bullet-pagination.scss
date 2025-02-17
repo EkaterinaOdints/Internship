@@ -1,8 +1,9 @@
-.swiper-pagination .swiper-pagination-bullet {
+.bullet-pagination .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   background-color: $bg-dark;
   opacity: 1;
+  flex-shrink: 0;
 
   &::before {
     content: "";
@@ -54,7 +55,7 @@
   }
 }
 
-.swiper-pagination .swiper-pagination-bullet-active {
+.bullet-pagination .swiper-pagination-bullet-active {
   background-color: $active;
   pointer-events: none;
 
@@ -63,7 +64,7 @@
   }
 }
 
-.swiper-pagination .swiper-pagination-disabled {
+.bullet-pagination .swiper-pagination-disabled {
   pointer-events: none;
   opacity: 0.3;
 }
