@@ -1,0 +1,12 @@
+.reviews-swiper__slide.swiper-slide {
+  width: 290px;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 604px;
+  }
+}

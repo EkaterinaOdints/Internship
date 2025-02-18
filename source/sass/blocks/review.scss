@@ -1,0 +1,151 @@
+.review {
+  border: 2px solid $bg-dark;
+  border-radius: 16px;
+  background-color: $bg-light;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 46px 50px 50px;
+  }
+}
+
+.review__author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.review__author {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    gap: 15px;
+  }
+}
+
+.review__author-image {
+  flex-shrink: 0;
+}
+
+.review__author-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.review__author-fullname {
+  font-size: 14px;
+  line-height: 18px;
+  color: $bg-dark;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.review__additional {
+  display: flex;
+  gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.review__additional-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: $tablet-width) {
+    gap: 11px;
+  }
+}
+
+.review__additional-title {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: $bg-dark;
+}
+
+.review__additional-info {
+  font-size: 12px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.review__description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+  }
+}
+
+.review__description-promo {
+  font-size: 16px;
+  line-height: 18px;
+  color: $bg-dark;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+
+.review__description-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review__description-text p {
+  margin: 0;
+}
