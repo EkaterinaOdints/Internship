@@ -1,0 +1,14 @@
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1028px;
+  }
+}
