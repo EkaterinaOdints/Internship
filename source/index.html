@@ -1027,8 +1027,54 @@
       </div>
     </section>
     <section class="form" data-test="form">
-      <div class="container">
-        <h2>Напишите нам</h2>
+      <div class="form__container">
+        <div class="form__wrapper">
+          <div class="form__text">
+            <h2 class="form__title title title--light">Напишите нам</h2>
+            <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          </div>
+          <form class="form__body feedback-form feedback-form-js" method="post" action="https://echo.htmlacademy.ru">
+            <div class="feedback-form__item form-item">
+              <input class="form-item__input input-js" type="text" name="name" id="name" required>
+              <label class="form-item__label" for="name">Имя</label>
+            </div>
+            <div class="feedback-form__item form-item">
+              <input class="form-item__input input-js" type="tel" name="phone" id="phone" pattern="^\+7\d{10}$" title="Номер должен начинаться с +7 и содержать 10 цифр" required>
+              <label class="form-item__label" for="phone">Телефон</label>
+            </div>
+            <div class="feedback-form__item form-item">
+              <textarea class="form-item__input form-item__input--textarea input-js" name="message" id="message"></textarea>
+              <label class="form-item__label" for="message">Ваше сообщение</label>
+            </div>
+            <div class="feedback-form__item form-item">
+              <div class="form-item__select-wrapper select-wrapper select-wrapper-js">
+                <select class="select-wrapper__hidden-item select-wrapper-hidden-item-js input-js" name="city" tabindex="-1" required>
+                  <option class="select-hidden-option-js" value="petersburg">Санкт-Петербург</option>
+                  <option class="select-hidden-option-js" value="ekaterinburg">Екатеринбург</option>
+                  <option class="select-hidden-option-js" value="novgorod">Новгород</option>
+                  <option class="select-hidden-option-js" value="kazan">Казань</option>
+                </select>
+                <div class="select-wrapper__primary-item select select-js">
+                  <button class="select__button select-button-js" type="button" id="city">
+                    <span class="visually-hidden">Выберите город</span>
+                  </button>
+                  <ul class="select__list list-reset select-list-js">
+                    <li class="select__list-item select-list-item-js" tabindex="0" id="petersburg">Санкт-Петербург</li>
+                    <li class="select__list-item select-list-item-js" tabindex="0" id="ekaterinburg">Екатеринбург</li>
+                    <li class="select__list-item select-list-item-js" tabindex="0" id="novgorod">Новгород</li>
+                    <li class="select__list-item select-list-item-js" tabindex="0" id="kazan">Казань</li>
+                  </ul>
+                </div>
+              </div>
+              <label class="form-item__label" for="city">Выберите город</label>
+            </div>
+            <div class="feedback-form__item form-agreement form-agreement--light-bg">
+              <input class="form-agreement__input input-js" type="checkbox" name="agreement" id="agreement" required>
+              <label class="form-agreement__label" for="agreement">Я согласен на обработку моих персональных данных</label>
+            </div>
+            <button class="feedback-form__button feedback-form-button-js button button--dark" type="submit">Отправить</button>
+          </form>
+        </div>
       </div>
     </section>
     <div class="feedback-modal feedback-modal-js">
@@ -1042,38 +1088,38 @@
         </div>
         <form class="feedback-modal__form feedback-form feedback-form-js" method="post" action="https://echo.htmlacademy.ru">
           <div class="feedback-form__item form-item">
-            <input class="form-item__input input-js" type="text" name="name" id="name" required>
-            <label class="form-item__label" for="name">Имя</label>
+            <input class="form-item__input input-js" type="text" name="name" id="modal-name" required>
+            <label class="form-item__label" for="modal-name">Имя</label>
           </div>
           <div class="feedback-form__item form-item">
-            <input class="form-item__input input-js" type="tel" name="phone" id="phone" pattern="^\+7\d{10}$" title="Номер должен начинаться с +7 и содержать 10 цифр" required>
-            <label class="form-item__label" for="phone">Телефон</label>
+            <input class="form-item__input input-js" type="tel" name="phone" id="modal-phone" pattern="^\+7\d{10}$" title="Номер должен начинаться с +7 и содержать 10 цифр" required>
+            <label class="form-item__label" for="modal-phone">Телефон</label>
           </div>
           <div class="feedback-form__item form-item">
             <div class="form-item__select-wrapper select-wrapper select-wrapper-js">
               <select class="select-wrapper__hidden-item select-wrapper-hidden-item-js input-js" name="city" tabindex="-1" required>
-                <option class="select-hidden-option-js" value="petersburg">Санкт-Петербург</option>
-                <option class="select-hidden-option-js" value="ekaterinburg">Екатеринбург</option>
-                <option class="select-hidden-option-js" value="novgorod">Новгород</option>
-                <option class="select-hidden-option-js" value="kazan">Казань</option>
+                <option class="select-hidden-option-js" value="modal-petersburg">Санкт-Петербург</option>
+                <option class="select-hidden-option-js" value="modal-ekaterinburg">Екатеринбург</option>
+                <option class="select-hidden-option-js" value="modal-novgorod">Новгород</option>
+                <option class="select-hidden-option-js" value="modal-kazan">Казань</option>
               </select>
               <div class="select-wrapper__primary-item select select-js">
-                <button class="select__button select-button-js" type="button" id="city">
+                <button class="select__button select-button-js" type="button" id="modal-city">
                   <span class="visually-hidden">Выберите город</span>
                 </button>
                 <ul class="select__list list-reset select-list-js">
-                  <li class="select__list-item select-list-item-js" tabindex="0" id="petersburg">Санкт-Петербург</li>
-                  <li class="select__list-item select-list-item-js" tabindex="0" id="ekaterinburg">Екатеринбург</li>
-                  <li class="select__list-item select-list-item-js" tabindex="0" id="novgorod">Новгород</li>
-                  <li class="select__list-item select-list-item-js" tabindex="0" id="kazan">Казань</li>
+                  <li class="select__list-item select-list-item-js" tabindex="0" id="modal-petersburg">Санкт-Петербург</li>
+                  <li class="select__list-item select-list-item-js" tabindex="0" id="modal-ekaterinburg">Екатеринбург</li>
+                  <li class="select__list-item select-list-item-js" tabindex="0" id="modal-novgorod">Новгород</li>
+                  <li class="select__list-item select-list-item-js" tabindex="0" id="modal-kazan">Казань</li>
                 </ul>
               </div>
             </div>
-            <label class="form-item__label" for="city">Выберите город</label>
+            <label class="form-item__label" for="modal-city">Выберите город</label>
           </div>
           <div class="feedback-form__item form-agreement form-agreement--light-bg">
-            <input class="form-agreement__input input-js" type="checkbox" name="agreement" id="agreement" required>
-            <label class="form-agreement__label" for="agreement">Я согласен на обработку моих персональных данных</label>
+            <input class="form-agreement__input input-js" type="checkbox" name="agreement" id="modal-agreement" required>
+            <label class="form-agreement__label" for="modal-agreement">Я согласен на обработку моих персональных данных</label>
           </div>
           <button class="feedback-form__button feedback-form-button-js button button--light" type="submit">Отправить</button>
         </form>

@@ -112,3 +112,69 @@
 .feedback-modal.feedback-modal--opened {
   display: block;
 }
+
+.feedback-modal__form {
+  gap: 15px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+}
+
+.feedback-modal__form .form-item__input {
+  border-color: rgba(72, 72, 72, 0.3);
+  height: 44px;
+  color: $text-dark;
+
+  @media (min-width: $tablet-width) {
+    height: 50px;
+  }
+
+  &:hover {
+    border-color: $text-dark;
+  }
+}
+
+.feedback-modal__form .form-item__label {
+  font-size: 14px;
+  line-height: 14px;
+  padding-bottom: 8px;
+}
+
+.feedback-modal__form .select__list {
+  border-color: $text-dark;
+}
+
+.feedback-modal__form .select__button {
+  border-color: rgba(72, 72, 72, 0.3);
+  color: $text-dark;
+
+  &::after {
+    background-color: $text-dark;
+  }
+
+  &:hover {
+    border-color: $text-dark;
+  }
+}
+
+.feedback-modal__form .select-wrapper__hidden-item {
+  height: 44px;
+
+  @media (min-width: $tablet-width) {
+    height: 50px;
+  }
+}
+
+.feedback-modal__form .select__button:focus {
+  border-color: $text-dark;
+}
+
+.feedback-modal__form .feedback-form__button {
+  margin-top: 10px;
+  align-self: center;
+
+  @media (min-width: $tablet-width) {
+    width: 194px;
+  }
+}

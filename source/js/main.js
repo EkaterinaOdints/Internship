@@ -220,84 +220,91 @@ const initFeedbackModal = () => {
 };
 
 const initFeedbackForm = () => {
-  const form = document.querySelector('.feedback-form');
-  const submitButton = form.querySelector('.feedback-form-button-js');
-  const inputCollection = form.querySelectorAll('.input-js');
+  const formCollection = document.querySelectorAll('.feedback-form');
 
-  inputCollection.forEach((input) => {
-    input.addEventListener('input', () => {
-      if (input.classList.contains('invalid')) {
-        input.classList.remove('invalid');
-      }
+  formCollection.forEach((form) => {
+    const submitButton = form.querySelector('.feedback-form-button-js');
+    const inputCollection = form.querySelectorAll('.input-js');
+
+    inputCollection.forEach((input) => {
+      input.addEventListener('input', () => {
+        if (input.classList.contains('invalid')) {
+          input.classList.remove('invalid');
+        }
+      });
     });
+
+    const checkFormValidity = () => {
+      inputCollection.forEach((input) => {
+        if (!input.checkValidity()) {
+          input.classList.add('invalid');
+        }
+      });
+    };
+
+    submitButton.addEventListener('click', checkFormValidity);
+
   });
 
-  const checkFormValidity = () => {
-    inputCollection.forEach((input) => {
-      if (!input.checkValidity()) {
-        input.classList.add('invalid');
-      }
-    });
-  };
-
-  submitButton.addEventListener('click', checkFormValidity);
-
   const initSelect = () => {
-    const selectWrapper = form.querySelector('.select-wrapper-js');
-    const selectHidden = selectWrapper.querySelector('.select-wrapper-hidden-item-js');
-    const selectHiddenOptionArray = Array(...selectHidden.querySelectorAll('.select-hidden-option-js'));
-    const select = selectWrapper.querySelector('.select-js');
-    const selectButton = select.querySelector('.select-button-js');
-    const selectList = select.querySelector('.select-list-js');
-    const selectListItemCollection = selectList.querySelectorAll('.select-list-item-js');
+    const selectCollection = document.querySelectorAll('.select-wrapper-js');
 
-    selectHidden.value = null;
+    selectCollection.forEach((selectWrapper) => {
+      const selectHidden = selectWrapper.querySelector('.select-wrapper-hidden-item-js');
+      const selectHiddenOptionArray = Array(...selectHidden.querySelectorAll('.select-hidden-option-js'));
+      const select = selectWrapper.querySelector('.select-js');
+      const selectButton = select.querySelector('.select-button-js');
+      const selectList = select.querySelector('.select-list-js');
+      const selectListItemCollection = selectList.querySelectorAll('.select-list-item-js');
 
-    const closeSelect = () => {
-      select.classList.remove('select--opened');
-    };
+      selectHidden.value = null;
 
-    const onDocumentClick = (evt) => {
-      if (evt.composedPath().includes(select)) {
-        return null;
-      } else {
+      const closeSelect = () => {
+        select.classList.remove('select--opened');
+      };
+
+      const onDocumentClick = (evt) => {
+        if (evt.composedPath().includes(select)) {
+          return null;
+        } else {
+          closeSelect();
+        }
+      };
+
+      document.addEventListener('click', onDocumentClick);
+
+      const toggleChosenItem = (evt) => {
+        const item = evt.target;
+        const activeItem = selectHidden.querySelector('[selected="selected"]');
+
+        selectButton.textContent = item.textContent;
+
+        if (activeItem) {
+          activeItem.removeAttribute('selected');
+        }
+
+        const selectedHiddenOption = selectHiddenOptionArray.find((element) => element.value === item.id);
+        selectedHiddenOption.setAttribute('selected', 'selected');
+
         closeSelect();
-      }
-    };
+      };
 
-    document.addEventListener('click', onDocumentClick);
+      const handleSelectClick = () => {
+        if (select.classList.contains('select--opened')) {
+          selectListItemCollection.forEach((item) => {
+            item.removeEventListener('click', toggleChosenItem);
+          });
+        } else {
+          selectListItemCollection.forEach((item) => {
+            item.addEventListener('click', toggleChosenItem);
+          });
+        }
 
-    const toggleChosenItem = (evt) => {
-      const item = evt.target;
-      const activeItem = selectHidden.querySelector('[selected="selected"]');
+        select.classList.toggle('select--opened');
+      };
 
-      selectButton.textContent = item.textContent;
-
-      if (activeItem) {
-        activeItem.removeAttribute('selected');
-      }
-
-      const selectedHiddenOption = selectHiddenOptionArray.find((element) => element.value === item.id);
-      selectedHiddenOption.setAttribute('selected', 'selected');
-
-      closeSelect();
-    };
-
-    const handleSelectClick = () => {
-      if (select.classList.contains('select--opened')) {
-        selectListItemCollection.forEach((item) => {
-          item.removeEventListener('click', toggleChosenItem);
-        });
-      } else {
-        selectListItemCollection.forEach((item) => {
-          item.addEventListener('click', toggleChosenItem);
-        });
-      }
-
-      select.classList.toggle('select--opened');
-    };
-
-    selectButton.addEventListener('click', handleSelectClick);
+      selectButton.addEventListener('click', handleSelectClick);
+    });
   };
 
   initSelect();
