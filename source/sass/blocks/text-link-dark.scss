@@ -1,0 +1,17 @@
+.text-link-dark {
+  color: $text-dark;
+
+  &:hover {
+    color: $bg-dark;
+    opacity: 0.7;
+  }
+
+  &:focus {
+    color: $bg-dark;
+    opacity: 1;
+  }
+
+  &:active {
+    color: $active;
+  }
+}

@@ -40,6 +40,28 @@
       height: 36px;
     }
   }
+
+  &:hover {
+    &::after {
+      background-color: $text-light-opacity;
+    }
+  }
+
+  &:focus {
+    background-color: $text-light;
+
+    &::after {
+      background-color: $bg-dark;
+    }
+  }
+
+  &:active {
+    background-color: $active;
+
+    &::after {
+      background-color: $text-light;
+    }
+  }
 }
 
 .social__link--vk {
