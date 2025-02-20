@@ -1,0 +1,22 @@
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 15px;
+    justify-content: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+.footer-nav__link {
+  color: $text-dark;
+  text-decoration: none;
+}

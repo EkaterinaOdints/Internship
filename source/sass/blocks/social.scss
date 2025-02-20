@@ -1,0 +1,82 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+.social__link {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: $bg-dark;
+  display: block;
+
+  &::after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-color: $text-light;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 36px;
+    height: 36px;
+
+    &::after {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.social__link--vk {
+  &::after {
+    mask-image: url("../__spritemap#sprite-vk-view");
+    mask-size: 12px 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      mask-size: 16px 9px;
+    }
+  }
+}
+
+.social__link--ok {
+  &::after {
+    mask-image: url("../__spritemap#sprite-ok-view");
+    mask-size: 7px 12px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      mask-size: 10px 16px;
+    }
+  }
+}
+
+.social__link--reddit {
+  &::after {
+    mask-image: url("../__spritemap#sprite-reddit-view");
+    mask-size: 11px 11px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      mask-size: 15px 15px;
+    }
+  }
+}
