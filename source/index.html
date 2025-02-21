@@ -1002,7 +1002,7 @@
           <ul class="contacts__list list-reset contacts-list">
             <li class="contacts-list__item">
               <span class="contacts-list__item-title">Центральный офис</span>
-              <span class="contacts-list__item-text" href="#">г. Новосибирск, ул. Щетинкина 68, культурный центр</span>
+              <span class="contacts-list__item-text">г. Новосибирск, ул. Щетинкина 68, культурный центр</span>
             </li>
             <li class="contacts-list__item contacts-item">
               <span class="contacts-list__item-title">Телефон</span>
@@ -1048,7 +1048,9 @@
             </div>
             <div class="feedback-form__item form-item">
               <div class="form-item__select-wrapper select-wrapper select-wrapper-js">
-                <select class="select-wrapper__hidden-item select-wrapper-hidden-item-js input-js" name="city" tabindex="-1" required>
+                <label class="select-wrapper__hidden-item-label" for="form-select">Выберите город</label>
+                <select class="select-wrapper__hidden-item select-wrapper-hidden-item-js input-js" id="form-select" name="city" tabindex="-1" required>
+                  <option class="select-hidden-option-js" value="">Выберите город</option>
                   <option class="select-hidden-option-js" value="petersburg">Санкт-Петербург</option>
                   <option class="select-hidden-option-js" value="ekaterinburg">Екатеринбург</option>
                   <option class="select-hidden-option-js" value="novgorod">Новгород</option>
@@ -1097,7 +1099,9 @@
           </div>
           <div class="feedback-form__item form-item">
             <div class="form-item__select-wrapper select-wrapper select-wrapper-js">
-              <select class="select-wrapper__hidden-item select-wrapper-hidden-item-js input-js" name="city" tabindex="-1" required>
+              <label class="select-wrapper__hidden-item-label" for="modal-select">Выберите город</label>
+              <select class="select-wrapper__hidden-item select-wrapper-hidden-item-js input-js" id="modal-select" name="city" tabindex="-1" required>
+                <option class="select-hidden-option-js" value="">Выберите город</option>
                 <option class="select-hidden-option-js" value="modal-petersburg">Санкт-Петербург</option>
                 <option class="select-hidden-option-js" value="modal-ekaterinburg">Екатеринбург</option>
                 <option class="select-hidden-option-js" value="modal-novgorod">Новгород</option>
