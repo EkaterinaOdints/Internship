@@ -41,6 +41,7 @@
 
 .form-item__input--textarea {
   height: 94px;
+  resize: none;
 
   @media (min-width: $tablet-width) {
     height: 88px;
@@ -75,4 +76,11 @@
 .form-item__input.disabled ~ .form-item__label {
   pointer-events: none;
   opacity: 0.6;
+}
+
+.form .form-item__select-wrapper ~ .form-item__label {
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }

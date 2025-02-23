@@ -55,11 +55,10 @@
   @media (min-width: $tablet-width) {
     align-items: start;
     text-align: start;
-    gap: 13px;
+    gap: 10px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 10px;
     align-items: center;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -95,7 +94,7 @@
   grid-area: social;
 
   @media (min-width: $tablet-width) {
-    max-width: 128px;
+    max-width: 150px;
     justify-self: right;
   }
 }

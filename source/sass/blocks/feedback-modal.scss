@@ -89,6 +89,7 @@
 
   @media (min-width: $tablet-width) {
     width: 350px;
+    gap: 20px;
   }
 }
 
@@ -96,12 +97,17 @@
   margin: 0;
   font-weight: 400;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 13px;
   color: $bg-dark;
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
-    line-height: 28px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 23px;
   }
 }
 
@@ -114,6 +120,7 @@
 }
 
 .feedback-modal__form {
+  width: 100%;
   gap: 15px;
 
   @media (min-width: $tablet-width) {
@@ -139,6 +146,17 @@
   font-size: 14px;
   line-height: 14px;
   padding-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .feedback-modal__form .select__list {
@@ -172,6 +190,7 @@
 
 .feedback-modal__form .feedback-form__button {
   margin-top: 10px;
+  margin-bottom: 0;
   align-self: center;
 
   @media (min-width: $tablet-width) {

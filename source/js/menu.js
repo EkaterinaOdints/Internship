@@ -12,7 +12,9 @@ const initMenu = () => {
   let isMenuOpened = false;
 
   const updateCollectionTabIndex = (collection, tabIndex) => {
-    collection.forEach((link) => link.setAttribute('tabindex', tabIndex));
+    collection.forEach((link) => {
+      link.setAttribute('tabindex', tabIndex);
+    });
   };
 
   const openSubmenu = (submenuList) => {
@@ -22,6 +24,10 @@ const initMenu = () => {
     const submenuLinkCollection = submenuList.querySelectorAll('.submenu-link-js');
 
     updateCollectionTabIndex(submenuLinkCollection, 0);
+
+    submenuLinkCollection.forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
   };
 
   const closeSubmenu = (submenuList) => {
@@ -31,6 +37,10 @@ const initMenu = () => {
     const submenuLinkCollection = submenuList.querySelectorAll('.submenu-link-js');
 
     updateCollectionTabIndex(submenuLinkCollection, -1);
+
+    submenuLinkCollection.forEach((link) => {
+      link.removeEventListener('click', closeMenu);
+    });
   };
 
   const toggleSubmenu = (evt) => {
@@ -46,7 +56,7 @@ const initMenu = () => {
     item.classList.toggle('menu__item--opened');
   };
 
-  const closeMenu = () => {
+  function closeMenu() {
     submenuCollection.forEach((item) => {
       const submenuButton = item.querySelector('.submenu-button-js');
       submenuButton.removeEventListener('click', toggleSubmenu);
@@ -58,6 +68,12 @@ const initMenu = () => {
 
     updateCollectionTabIndex(menuLinkCollection, -1);
 
+    menuLinkCollection.forEach((link) => {
+      if (!link.classList.contains('submenu-button-js')) {
+        link.removeEventListener('click', closeMenu);
+      }
+    });
+
     menu.setAttribute('aria-hidden', 'true');
     body.classList.remove('overlay');
     header.classList.remove('menu-opened');
@@ -66,7 +82,7 @@ const initMenu = () => {
     document.removeEventListener('keydown', onEscapeClick);
 
     isMenuOpened = false;
-  };
+  }
 
   const openMenu = () => {
     submenuCollection.forEach((item) => {
@@ -75,6 +91,12 @@ const initMenu = () => {
     });
 
     updateCollectionTabIndex(menuLinkCollection, 0);
+
+    menuLinkCollection.forEach((link) => {
+      if (!link.classList.contains('submenu-button-js')) {
+        link.addEventListener('click', closeMenu);
+      }
+    });
 
     menu.removeAttribute('aria-hidden');
     body.classList.add('overlay');
