@@ -68,7 +68,7 @@
 }
 
 .page-header.menu-opened .menu {
-  overflow: scroll;
+  overflow-y: auto;
   width: 290px;
   padding: 0 25px;
 
