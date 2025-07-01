@@ -17,10 +17,10 @@
   background-size: cover;
   background-image:
     image-set(
-      url("../../img/form/form-background-mobile@1x.webp") 1x type("image/webp"),
-      url("../../img/form/form-background-mobile@2x.webp") 2x type("image/webp"),
-      url("../../img/form/form-background-mobile@1x.jpg") 1x type("image/jpeg"),
-      url("../../img/form/form-background-mobile@2x.jpg") 2x type("image/jpeg")
+      url("../img/form/form-background-mobile@1x.webp") 1x type("image/webp"),
+      url("../img/form/form-background-mobile@2x.webp") 2x type("image/webp"),
+      url("../img/form/form-background-mobile@1x.jpg") 1x type("image/jpeg"),
+      url("../img/form/form-background-mobile@2x.jpg") 2x type("image/jpeg")
     );
 
   @media (min-width: $tablet-width) {
@@ -30,10 +30,10 @@
     width: 652px;
     background-image:
       image-set(
-        url("../../img/form/form-background-tablet@1x.webp") 1x type("image/webp"),
-        url("../../img/form/form-background-tablet@2x.webp") 2x type("image/webp"),
-        url("../../img/form/form-background-tablet@1x.jpg") 1x type("image/jpeg"),
-        url("../../img/form/form-background-tablet@2x.jpg") 2x type("image/jpeg")
+        url("../img/form/form-background-tablet@1x.webp") 1x type("image/webp"),
+        url("../img/form/form-background-tablet@2x.webp") 2x type("image/webp"),
+        url("../img/form/form-background-tablet@1x.jpg") 1x type("image/jpeg"),
+        url("../img/form/form-background-tablet@2x.jpg") 2x type("image/jpeg")
       );
   }
 
@@ -41,10 +41,10 @@
     width: 1240px;
     background-image:
       image-set(
-        url("../../img/form/form-background-desktop@1x.webp") 1x type("image/webp"),
-        url("../../img/form/form-background-desktop@2x.webp") 2x type("image/webp"),
-        url("../../img/form/form-background-desktop@1x.jpg") 1x type("image/jpeg"),
-        url("../../img/form/form-background-desktop@2x.jpg") 2x type("image/jpeg")
+        url("../img/form/form-background-desktop@1x.webp") 1x type("image/webp"),
+        url("../img/form/form-background-desktop@2x.webp") 2x type("image/webp"),
+        url("../img/form/form-background-desktop@1x.jpg") 1x type("image/jpeg"),
+        url("../img/form/form-background-desktop@2x.jpg") 2x type("image/jpeg")
       );
   }
 }
